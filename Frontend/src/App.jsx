@@ -2,14 +2,15 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import { CreateTodo } from "./components/CreateTodo.jsx"
+import { Todos } from './components/Todos.jsx'
 function App() {
-  const [count, setCount] = useState(0)
-
+    const [todos, setTodos]= useState([]);
   return (
    
       <div>
-       hi there
+       <CreateTodo></CreateTodo>
+       <Todos todos={todos}></Todos>
     </div>
   )
 }
